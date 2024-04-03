@@ -1,4 +1,4 @@
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/ecamo19/[shade_house_reproducible_stats](https://github.com/ecamo19/physiolocal_responses_tropical_dry_forest_reproducible_stats/main)
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/ecamo19/[shade_house_reproducible_stats](https://github.com/ecamo19/physiolocal_responses_tropical_dry_forest_reproducible_stats/main))
 
 This repository contains all the data and code for reproducing the results from the paper titled "Physiological and growth responses of tropical dry forest tree seedlings to water and nutrient additions".
 
