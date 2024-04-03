@@ -6,4 +6,4 @@ To reproduce the result click on the binder bottom. This will take you to a bind
 
 Inside the repository, go to the folder called notebooks. There you will find four _.html_ and four _.ipynb_ files. Both contain the same code, their only difference is that the _.ipynb_ files can be used to execute and modify the code. 
 
-__Press `crtl + enter` to run the each cell inside the .ipynb notebooks.__
+__Press `crtl + enter` to run the cell inside the .ipynb notebooks.__
