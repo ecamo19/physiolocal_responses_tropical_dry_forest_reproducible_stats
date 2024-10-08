@@ -1,4 +1,4 @@
-id,spcode,treatment,number_of_root_nodulation,nodule_count_lab,nodule_mass_in the lab,average_nodule_weight,estimated_nodule_mass_per_plant 
+id,spcode,treatment,total_number_of_plant_nodules,number_of_nodules_weighted,nodule_weight,average_nodule_weight,estimated_total_nodule_mass_per_plant 
 5,ec,ambientrain,25,7,0.011,0.001571429,0.039
 6,ec,ambientrain,30,5,0.052,0.0104,0.312
 7,ec,ambientrain,7,4,0.023,0.00575,0.04
