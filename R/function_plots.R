@@ -34,8 +34,8 @@ boxplot_plot_pmap <-  function(x, y, fill = NULL, data) {
 
     ggplot2::ggplot(data, ggplot2::aes(fill = !!fill, x = !!xvar, y = !!yvar )) +
         ggplot2::geom_boxplot() +
-        ggplot2::scale_fill_manual(values = c("#DDAA33","#BB5566",
-                                              "#117733","#004488")) +
+        ggplot2::scale_fill_manual(values = c("#DDAA33","#117733",
+                                            "#BB5566","#004488")) +
 
         ggplot2::theme_classic() +
         ggplot2::theme(legend.position = "bottom") +
@@ -86,8 +86,8 @@ cleveland_plot <-function(x, y, color = NULL, shape  = NULL ,
     #labs(title = paste0(response_variable)) +
     ggplot2::facet_wrap(~ response_var, scales = "free", ncol = 2) +
     # Significance colors
-    ggplot2::scale_color_manual(values = c("#DDAA33","#BB5566",
-                                              "#117733","#004488")) +
+    ggplot2::scale_color_manual(values = c("#DDAA33","#117733",
+                                            "#BB5566","#004488")) +
 
     scale_shape_manual(values = c(1, 16)) +
     ggplot2::ylab("Estimated coefficients (median +/- 95CI)") +
@@ -95,11 +95,6 @@ cleveland_plot <-function(x, y, color = NULL, shape  = NULL ,
     ggplot2::coord_flip()
 
 }
-
-
-
-
-
 
 #  Simulate --------------------------------------------------------------------
 
