@@ -20,27 +20,27 @@ validation_plots <- function(model, data, group, variables = c()) {
               abline = 0, pch = 16, xlab = "Standardised residuals", ylab = "spcode")
 
 
-    (g <- car::qqPlot(resid(model)))
+    #(g <- car::qqPlot(resid(model)))
 
-    (h <- plot(resid(model, type = "pearson") ~ hat(model.matrix(model)),
-               las = 1,
-               ylab = "Standardised residuals",
-               xlab = "Leverage"))
+    #(h <- plot(resid(model, type = "pearson") ~ hat(model.matrix(model)),
+    #           las = 1,
+    #           ylab = "Standardised residuals",
+    #           xlab = "Leverage"))
 
-    (i <- hist(resid(model), xlab = "Residuals", main = ""))
+    #(i <- hist(resid(model), xlab = "Residuals", main = ""))
 
-    if (length(variables) > 0){
-        for (each_variable in variables) {
+    #if (length(variables) > 0){
+    #    for (each_variable in variables) {
 
-            plot(data[each_variable],
-                 resid(model),
-                 xlab = each_variable,
-                 ylab = "Residuals")}} else{
+    #        plot(data[each_variable],
+    #             resid(model),
+    #             xlab = each_variable,
+    #             ylab = "Residuals")}} else{
 
 
-                    print("No variable specified inthe variables argument")
+    #                print("No variable specified inthe variables argument")
 
-                 }
+    #             }
 
 
     return(cowplot::plot_grid(a,b,c,d,e,f, ncol = 3))
