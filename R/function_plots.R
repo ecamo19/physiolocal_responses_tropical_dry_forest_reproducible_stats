@@ -38,7 +38,7 @@ boxplot_plot_pmap <-  function(x, y, fill = NULL, data) {
     ggplot2::ggplot(data, ggplot2::aes(fill = !!fill, x = !!xvar, y = !!yvar )) +
         ggplot2::geom_boxplot() +
         
-        ggplot2::scale_y_continuous(breaks = scales::pretty_breaks(n = 6))+
+        ggplot2::scale_y_continuous(breaks = scales::pretty_breaks(n = 10))+
 
         #ggplot2::scale_y_continuous(limits = c(0, limit_y_axis)) +
         #ggplot2::scale_y_continuous(breaks = round(seq(0, limit_y_axis, by = 0.00001), 4)) +
