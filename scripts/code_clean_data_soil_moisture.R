@@ -5,7 +5,7 @@ library(tidyr)
 
 # Load Biomass data -----------------------------------------------------------
 data_soil_moisture <-
-	read.csv("raw_data/soil_moisture_data_complete.csv", header = T, sep = ",",
+	read.csv("raw_data/7_soil_moisture_data.csv", header = T, sep = ",",
 	         na.strings = "-") %>% clean_names()
 
 # Recode factors --------------------------------------------------------------
