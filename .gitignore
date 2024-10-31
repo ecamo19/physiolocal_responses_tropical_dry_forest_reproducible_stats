@@ -53,6 +53,7 @@ rsconnect/
 
 figures/
 .DS_Store
+.ipynb_checkpoints
 
 # pixi environments
 .pixi
