@@ -8,7 +8,7 @@ version = "0.1.0"
 
 [tasks]
 rstudio = { cmd = "rstudio"}
-jupiter = "jupyter lab"
+jupyter = "jupyter lab"
 
 [dependencies]
 r = "<=4.4.1"
