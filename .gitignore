@@ -53,3 +53,7 @@ rsconnect/
 
 figures/
 .DS_Store
+
+# pixi environments
+.pixi
+*.egg-info
