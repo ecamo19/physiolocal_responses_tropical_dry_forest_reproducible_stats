@@ -1,17 +1,16 @@
 # Objective -------------------------------------------------------------------
 # The objective of this script is to create a data frame with different
-#measuares of growth.
+# measuares of growth.
 #
 # Measuments
 #
 # + RGR and AGR with the function agr_rgr_calculators
 # + Using harvested a the beginning as initial mean value
 
-
-# Load RGR and AGR FUNCTION ---------------------------------------------------
+# Load RGR and AGR FUNCTION -----------------------------------------------------
 source("./R/functions_agr_rgr_calculators.R")
 
-# Load packages ---------------------------------------------------------------
+# Load packages -----------------------------------------------------------------
 library(dplyr)
 library(janitor)
 # For date
@@ -20,18 +19,18 @@ library(lubridate)
 library(tidyr)
 # For map
 library(purrr)
+library(readxl)
 
-# Load data -------------------------------------------------------------------
-raw_data_heigths <- read.csv("./raw_data/6_plant_heights_data.csv", header = TRUE) %>%
+# Load data ---------------------------------------------------------------------
+raw_data_heigths <- read_excel("./raw_data/6_plant_heights_data.xlsx") %>%
     clean_names()
 
-
-# Cleaning raw data -----------------------------------------------------------
+# Cleaning raw data -------------------------------------------------------------
 
 # Remove x at the beginning of the colnames
 colnames(raw_data_heigths) <- sub("*x", "", colnames(raw_data_heigths))
 
-## Dealing with dates ---------------------------------------------------------
+## Dealing with dates -----------------------------------------------------------
 data_heights_clean <-
     raw_data_heigths %>%
 
@@ -40,7 +39,7 @@ data_heights_clean <-
             cols = starts_with("2015"),
             names_to = "date",
             #names_prefix = "wk",
-            values_to = "height_cm") %>%
+            values_to = "height_cm") %>%  
 
         # Convert character columns to factor
         mutate(across(where(is.character), as.factor),
@@ -71,7 +70,7 @@ data_heights_clean <-
         dplyr::select(id,spcode,treatment,nfixer, everything(),-family)
 
 
-# Calculate RGR and AGR -------------------------------------------------------
+# Calculate RGR and AGR ------------------------------------------------s---------
 
 data_rgr_agr <-
     data_heights_clean %>%
@@ -84,14 +83,13 @@ data_rgr_agr <-
         # Get rgr and agr at the final of the experiment
         filter(number_of_days == 85)
 
-
-# Calculate RGR as a slope ----------------------------------------------------
+# Calculate RGR as a slope ------------------------------------------------------
 
 # Relative growth rate (RGR) of height was calculated as the slope of the
 # natural log transformed height of each individual as a function of time
 
 
-## Nest data ------------------------------------------------------------------
+## Nest data --------------------------------------------------------------------
 
 data_height_by_id <-
     data_heights_clean %>%
@@ -100,7 +98,7 @@ data_height_by_id <-
         nest()
 
 
-## Create model ---------------------------------------------------------------
+## Create model -----------------------------------------------------------------
 
 # This model only returns the slope of each id plant
 
@@ -110,7 +108,7 @@ rgr_model_coef <- function(data) {
     coef(lm(log(height_cm) ~ log(number_of_days_int + 1), data = data))[[2]]
 }
 
-## map ------------------------------------------------------------------------
+## map --------------------------------------------------------------------------
 
 rgr_slope <-
     data_height_by_id %>%
@@ -124,7 +122,7 @@ rgr_slope <-
         # Remove col data
         dplyr::select(-data)
 
-# Join data sets and create data for models -----------------------------------
+# Join data sets and create data for models -------------------------------------
 data_rgr_cleaned <-
 
     data_rgr_agr %>%
@@ -135,7 +133,7 @@ data_rgr_cleaned <-
     # Remove unused colunms
     dplyr::select(-c(date, height_cm, number_of_days, number_of_days_int))
 
-# Remove all files except clean data set --------------------------------------
+# Remove all files except clean data set ----------------------------------------
 
 items <- c("agr", "data_height_by_id", "data_heights_clean", "data_rgr_agr",
            "raw_data_heigths", "rgr", "rgr_model_coef", "rgr_slope")
