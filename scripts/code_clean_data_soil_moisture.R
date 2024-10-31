@@ -6,7 +6,8 @@ library(readxl)
 
 # Load Biomass data -----------------------------------------------------------
 data_soil_moisture <-
-    read_excel("raw_data/7_soil_moisture_data.xlsx") %>% clean_names()
+    read_excel("raw_data/7_soil_moisture_data.xlsx", na = c("N/A", "-","NA")) %>%  
+    clean_names()
 
 # Recode factors --------------------------------------------------------------
 
