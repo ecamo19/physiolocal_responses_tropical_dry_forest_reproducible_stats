@@ -212,6 +212,7 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/noarch/r-dbplyr-2.5.0-r44hc72bb7e_1.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/r-deriv-4.1.6-r44hc72bb7e_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/r-diagram-1.6.5-r44ha770c72_3.conda
+      - conda: https://conda.anaconda.org/conda-forge/noarch/r-dichromat-2.0_0.1-r44ha770c72_3.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/r-digest-0.6.37-r44h0d4f4ea_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/r-doby-4.6.24-r44hc72bb7e_0.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/r-dplyr-1.1.4-r44h0d4f4ea_1.conda
@@ -642,6 +643,7 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/noarch/r-dbplyr-2.5.0-r44hc72bb7e_1.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/r-deriv-4.1.6-r44hc72bb7e_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/r-diagram-1.6.5-r44ha770c72_3.conda
+      - conda: https://conda.anaconda.org/conda-forge/noarch/r-dichromat-2.0_0.1-r44ha770c72_3.conda
       - conda: https://conda.anaconda.org/conda-forge/osx-64/r-digest-0.6.37-r44h25d921d_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/r-doby-4.6.24-r44hc72bb7e_0.conda
       - conda: https://conda.anaconda.org/conda-forge/osx-64/r-dplyr-1.1.4-r44h25d921d_1.conda
@@ -1063,6 +1065,7 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/noarch/r-dbplyr-2.5.0-r43hc72bb7e_1.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/r-deriv-4.1.6-r43hc72bb7e_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/r-diagram-1.6.5-r43ha770c72_3.conda
+      - conda: https://conda.anaconda.org/conda-forge/noarch/r-dichromat-2.0_0.1-r43ha770c72_3.conda
       - conda: https://conda.anaconda.org/conda-forge/osx-arm64/r-digest-0.6.37-r43hd76f289_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/r-doby-4.6.24-r43hc72bb7e_0.conda
       - conda: https://conda.anaconda.org/conda-forge/osx-arm64/r-dplyr-1.1.4-r43hd76f289_1.conda
@@ -1467,6 +1470,7 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/noarch/r-dbplyr-2.5.0-r44hc72bb7e_1.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/r-deriv-4.1.6-r44hc72bb7e_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/r-diagram-1.6.5-r44ha770c72_3.conda
+      - conda: https://conda.anaconda.org/conda-forge/noarch/r-dichromat-2.0_0.1-r44ha770c72_3.conda
       - conda: https://conda.anaconda.org/conda-forge/win-64/r-digest-0.6.37-r44h8ae3a7c_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/r-doby-4.6.24-r44hc72bb7e_0.conda
       - conda: https://conda.anaconda.org/conda-forge/win-64/r-dplyr-1.1.4-r44h8ae3a7c_1.conda
@@ -11483,6 +11487,38 @@ packages:
   license_family: GPL3
   size: 677140
   timestamp: 1719771634487
+- kind: conda
+  name: r-dichromat
+  version: 2.0_0.1
+  build: r43ha770c72_3
+  build_number: 3
+  subdir: noarch
+  noarch: generic
+  url: https://conda.anaconda.org/conda-forge/noarch/r-dichromat-2.0_0.1-r43ha770c72_3.conda
+  sha256: f0a8d68c2adb3cdf27826300c5e7f6f77f0dbc189f21565e9ecadccbe7586d4a
+  md5: 40891660ade576876ce04578b0dc4170
+  depends:
+  - r-base >=4.3,<4.4.0a0
+  license: GPL-2.0-only
+  license_family: GPL2
+  size: 160593
+  timestamp: 1719907564726
+- kind: conda
+  name: r-dichromat
+  version: 2.0_0.1
+  build: r44ha770c72_3
+  build_number: 3
+  subdir: noarch
+  noarch: generic
+  url: https://conda.anaconda.org/conda-forge/noarch/r-dichromat-2.0_0.1-r44ha770c72_3.conda
+  sha256: a6f240255cf22c473c97e7f95fc6d76e4ebc0a4ab100d40489ad147da4d0225c
+  md5: f69c280b5e7651c916f1efb05db65a93
+  depends:
+  - r-base >=4.4,<4.5.0a0
+  license: GPL-2.0-only
+  license_family: GPL2
+  size: 160132
+  timestamp: 1719907560441
 - kind: conda
   name: r-digest
   version: 0.6.37
