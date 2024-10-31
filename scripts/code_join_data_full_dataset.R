@@ -223,3 +223,4 @@ items <- c("data_biomass_cleaned", "data_ecophys_cleaned", "data_complete",
            "raw_data_isotopes", "raw_data_traits")
 
 remove(items, list = items)
+print(paste0("Files loaded: ", ls()))

@@ -139,3 +139,4 @@ items <- c("agr", "data_height_by_id", "data_heights_clean", "data_rgr_agr",
            "raw_data_heigths", "rgr", "rgr_model_coef", "rgr_slope")
 
 remove(items, list = items)
+print(paste0("Files loaded: ", ls()))

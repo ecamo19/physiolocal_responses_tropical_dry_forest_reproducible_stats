@@ -64,3 +64,4 @@ data_nodules_cleaned <-
 items <- c("data_nodules", "data_init_height", "data_init_height_nfixer")
 
 remove(items, list = items)
+print(paste0("Files loaded: ", ls()))
