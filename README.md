@@ -62,4 +62,4 @@ clicking over it. This is located at the top right) and the kernel R (Pixi) is
 selected. 
 
 You can see the Kernels available by clicking the `Kernel` tap and then 
-clicking the `Change kernel` tab
+clicking the `Change kernel` tab.
