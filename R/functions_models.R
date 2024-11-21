@@ -123,7 +123,7 @@ model_combinations_formulas <- function(y_var, x_var, nlme = FALSE){
 model_nlme <- function(formula, data){
     model_nlme <-lme(formula, 
                      random = ~1|spcode,
-                     weights = varIdent(form = ~1|spcode),
+                     #weights = varIdent(form = ~1|spcode),
                      data = data)
     
     # Step done for modifying the fixed term in the summary

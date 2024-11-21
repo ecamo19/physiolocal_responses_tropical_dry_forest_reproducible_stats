@@ -32,15 +32,23 @@ boxplot_plot_pmap <-  function(x, y, fill = NULL, data) {
     yvar <- rlang::enquo(y)
     fill <- rlang::enquo(fill)
 
+    limit_y_axis <- data %>% dplyr::select(!!yvar) %>% base::max() %>% round(.,3)
+    print(limit_y_axis)
+    
     ggplot2::ggplot(data, ggplot2::aes(fill = !!fill, x = !!xvar, y = !!yvar )) +
         ggplot2::geom_boxplot() +
-        ggplot2::scale_fill_manual(values = c("#F0E442","#009E73",
-                                              "#56B4E9","#0072B2")) +
+        
+        ggplot2::scale_y_continuous(breaks = scales::pretty_breaks(n = 10))+
 
+        #ggplot2::scale_y_continuous(limits = c(0, limit_y_axis)) +
+        #ggplot2::scale_y_continuous(breaks = round(seq(0, limit_y_axis, by = 0.00001), 4)) +
+        ggplot2::scale_fill_manual(values = c("#DDAA33","#117733",
+                                            "#BB5566","#004488")) +
         ggplot2::theme_classic() +
         ggplot2::theme(legend.position = "bottom") +
         ggplot2::theme(axis.text=element_text(size = 21),
-                       axis.title=element_text(size = 21,face = "bold"))
+                       axis.title=element_text(size = 21,face = "bold")) 
+                               
 }
 
 
@@ -86,8 +94,8 @@ cleveland_plot <-function(x, y, color = NULL, shape  = NULL ,
     #labs(title = paste0(response_variable)) +
     ggplot2::facet_wrap(~ response_var, scales = "free", ncol = 2) +
     # Significance colors
-    ggplot2::scale_color_manual(values = c("#F0E442","#009E73",
-                                           "#56B4E9","#0072B2")) +
+    ggplot2::scale_color_manual(values = c("#DDAA33","#117733",
+                                            "#BB5566","#004488")) +
 
     scale_shape_manual(values = c(1, 16)) +
     ggplot2::ylab("Estimated coefficients (median +/- 95CI)") +
@@ -95,11 +103,6 @@ cleveland_plot <-function(x, y, color = NULL, shape  = NULL ,
     ggplot2::coord_flip()
 
 }
-
-
-
-
-
 
 #  Simulate --------------------------------------------------------------------
 

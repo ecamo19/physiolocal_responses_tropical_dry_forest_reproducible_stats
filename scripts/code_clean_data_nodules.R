@@ -1,22 +1,22 @@
-# Load packages ---------------------------------------------------------------
+# Load packages -----------------------------------------------------------------
 library(dplyr)
 library(janitor)
+library(readxl)
 
-# Load nodule and height data -------------------------------------------------
+# Load nodule and height data ---------------------------------------------------
 
 data_nodules <-
-	read.csv("./raw_data/1_nodule_data.csv", header = T) %>%
+	read_excel("./raw_data/1_nodule_data.xlsx") %>%
 	clean_names()
 
 data_init_height <-
-	read.csv("./raw_data/6_plant_heights_data.csv", header = T) %>%
+	read_excel("./raw_data/6_plant_heights_data.xlsx") %>%
 	clean_names() %>%
 
     #remove unused columns
 	dplyr::select(1:5)
 
-
-# Clean nodules datase --------------------------------------------------------
+# Clean nodules datase ----------------------------------------------------------
 
 data_nodules_cleaned  <-
 	data_nodules %>%
@@ -32,9 +32,7 @@ data_nodules_cleaned  <-
     # Order columns
     dplyr::select(id, spcode, treatment, everything())
 
-
-
-# Clean data initial height ---------------------------------------------------
+# Clean data initial height -----------------------------------------------------
 
 data_init_height_nfixer <-
 	data_init_height  %>%
@@ -52,15 +50,15 @@ data_init_height_nfixer <-
 
     rename(init_height = "x20150831")
 
-
-# Join data sets --------------------------------------------------------------
+# Join data sets ----------------------------------------------------------------
 
 data_nodules_cleaned <-
 	inner_join(data_nodules_cleaned, data_init_height_nfixer ,
 	           by = c('id','treatment','spcode'))
 
 
-# Remove unused data sets -----------------------------------------------------
+# Remove unused data sets -------------------------------------------------------
 items <- c("data_nodules", "data_init_height", "data_init_height_nfixer")
 
 remove(items, list = items)
+print(paste0("Files loaded: ", ls()))
