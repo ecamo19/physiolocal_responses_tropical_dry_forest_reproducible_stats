@@ -9,7 +9,7 @@ For reproducing the results in the repository, two options have been implemented
 
 You can report any issue with the repository to erickcamo19@gmail.com
 
-Or visit the github repository at github.com/ecamo19/https://github.com/ecamo19/physiolocal_responses_tropical_dry_forest_reproducible_stats)
+Or visit the github repository at https://github.com/ecamo19/physiolocal_responses_tropical_dry_forest_reproducible_statss
 
 
 
