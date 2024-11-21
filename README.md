@@ -31,24 +31,25 @@ __Press `crtl + enter` to run each cell (chunk) inside the .ipynb notebooks.__
 
 ## 2) Pixi dev
 
-First, you have to install pixi in your local machine. Please follow the 
-developers guide found here: https://pixi.sh/latest/ to do it. 
+First, you have to install pixi in your local machine. To do it, please follow the 
+developers guide found at https://pixi.sh/latest/. 
 
-Download this repository containing the data and the code into your 
-local machine. Do not modify anything inside the folder.
+Second, download this repository into your local machine. Do not 
+modify anything inside the folder.
 
-Open your terminal (macos or Linux) or command prompt (windows) and set the 
-working inside the downloaded repository.
+Open your terminal (macOS or Linux) or your command prompt (windows) and set the 
+working to the downloaded repository.
 
-For example if you downloaded the repository to your Downloads folder enter:
+For example if you downloaded the repository to your Downloads folder, enter:
 
-`cd ~/Downloads/physiolocal_responses_tropical_dry_forest_reproducible_stats/`
+    `cd ~/Downloads/physiolocal_responses_tropical_dry_forest_reproducible_stats/`
 
-Once you have set your working directory inside to the downloaded repository run:
+Once you have setup your the working directory inside to the downloaded 
+repository, run:
 
-`pixi shell`
+    `pixi shell` 
 
 and then to view the code run: 
 
-`pixi run jupyter notebook`
+    `pixi run jupyter notebook`
 
