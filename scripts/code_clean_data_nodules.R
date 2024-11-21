@@ -55,6 +55,13 @@ data_init_height_nfixer <-
            treatment = factor(treatment),
            id = factor(id)) %>%
 
+	# Rename treatments
+	mutate(treatment = case_when(treatment == "ambientrain" ~ "no_additions",
+								treatment == "ambientrain_water_nutrients" ~ "plus_water_nutrients",     
+                                treatment == "ambientrain_water" ~ "plus_water", 
+                                treatment == "ambientrain_nutrients" ~ "plus_nutrients",
+                                TRUE ~ treatment)) %>%
+
     rename(init_height = "x20150831")
 
 # Join data sets ----------------------------------------------------------------
