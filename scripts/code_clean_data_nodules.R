@@ -29,6 +29,13 @@ data_nodules_cleaned  <-
 		                                "ambientrain_nutrients",
 		                                "ambientrain_water",
 		                                "ambientrain_water_nutrients"))) %>%
+
+	# Rename treatments
+	mutate(treatment = case_when(treatment == "ambientrain" ~ "no_additions",
+								treatment == "ambientrain_water_nutrients" ~ "plus_water_nutrients",     
+                                treatment == "ambientrain_water" ~ "plus_water", 
+                                treatment == "ambientrain_nutrients" ~ "plus_nutrients",
+                                TRUE ~ treatment)) %>% 
     # Order columns
     dplyr::select(id, spcode, treatment, everything())
 
