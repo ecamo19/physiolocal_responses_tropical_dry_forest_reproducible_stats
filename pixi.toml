@@ -1,12 +1,13 @@
 [project]
 authors = ["ecamo19 <erickcamo19@gmail.com>"]
 channels = ["conda-forge"]
-description = "This file contains all the dependencies for reproducing the statistical analisys for the paper title: "
+description = "This file contains all the dependencies for reproducing the statistical analisys for the paper title:Physiological and growth responses of tropical dry forest tree seedlings to water and nutrient additions"
 name = "physiolocal_responses_tropical_dry_forest_reproducible_stats"
 platforms = ["win-64", "linux-64", "osx-64", "osx-arm64"]
 version = "0.1.0"
 
 [tasks]
+# This is for Linux distros
 rstudio = { cmd = "rstudio"}
 
 [dependencies]
