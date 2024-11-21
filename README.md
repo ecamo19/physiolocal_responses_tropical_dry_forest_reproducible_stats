@@ -32,6 +32,6 @@ working inside the downloaded repository.
 
 For example if you downloaded the repository to your Downloads folder enter
 
-```cd ~/Downloads``
+`cd ~/Downloads/physiolocal_responses_tropical_dry_forest_reproducible_stats/`
 
 Done this... 
