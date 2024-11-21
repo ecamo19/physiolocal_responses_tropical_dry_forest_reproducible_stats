@@ -40,7 +40,7 @@ You can download the github repository by entering:
 
 `git clone ecamo19/physiolocal_responses_tropical_dry_forest_reproducible_stats`
 
-In your terminal (macOS or Linux) or your command prompt (windows) and set the 
+In your terminal (macOS or Linux) or your command prompt (windows) set the 
 working to the downloaded repository.
 
 For example, if you downloaded the repository to your Downloads folder, enter:
