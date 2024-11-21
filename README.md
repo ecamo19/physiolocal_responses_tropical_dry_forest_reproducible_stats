@@ -29,7 +29,7 @@ is that the _.ipynb_ files can be used to execute and modify the code.
 
 __Press `crtl + enter` to run each cell (chunk) inside the .ipynb notebooks.__
 
-## 2) Pixi dev
+## 2) Pixi dev (*Recommended)
 
 First, you have to install pixi into your local machine. To do it, please follow 
 the developers guide found at https://pixi.sh/latest/. 
@@ -55,3 +55,11 @@ enter:
 and then, to view the code enter: 
 
 `pixi run jupyter notebook`
+
+Finally, to execute the code in each `.ipynb` make sure notebook is `Trusted` 
+(if a Not Trusted flag shows up inside the notebook, change it to Trusted by 
+clicking over it. This is located at the top right) and the kernel R (Pixi) is 
+selected. 
+
+You can see the Kernels available by clicking the `Kernel` tap and then 
+clicking the `Change kernel` tab. 
