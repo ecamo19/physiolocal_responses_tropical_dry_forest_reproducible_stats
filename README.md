@@ -31,11 +31,10 @@ __Press `crtl + enter` to run each cell (chunk) inside the .ipynb notebooks.__
 
 ## 2) Pixi dev
 
-First, you have to install pixi in your local machine. To do it, please follow 
+First, you have to install pixi into your local machine. To do it, please follow 
 the developers guide found at https://pixi.sh/latest/. 
 
-Second, download this repository into your local machine. Do not 
-modify anything inside the folder.
+Second, download this repository. Do not modify anything inside the folder.
 
 Open your terminal (macOS or Linux) or your command prompt (windows) and set the 
 working to the downloaded repository.
