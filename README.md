@@ -44,4 +44,11 @@ For example if you downloaded the repository to your Downloads folder enter:
 
 `cd ~/Downloads/physiolocal_responses_tropical_dry_forest_reproducible_stats/`
 
-Done this... 
+Once you have set your working directory inside to the downloaded repository run:
+
+`pixi shell`
+
+and then to view the code run: 
+
+`pixi run jupyter notebook`
+
