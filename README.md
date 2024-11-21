@@ -7,6 +7,12 @@ to water and nutrient additions".
 
 For reproducing the results in the repository, two options have been implemented: 
 
+You can report any issue with the repository to erickcamo19@gmail.com
+
+Or visit the github repository at github.com/ecamo19/https://github.com/ecamo19/physiolocal_responses_tropical_dry_forest_reproducible_stats)
+
+
+
 ## 1) Binder
 
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/ecamo19/physiolocal_responses_tropical_dry_forest_reproducible_stats/HEAD)
