@@ -3,7 +3,8 @@
 This repository contains all the raw data and code used in the paper titled:
 
 "Physiological and growth responses of tropical dry forest tree seedlings 
-to water and nutrient additions".
+to water and nutrient additions: comparisons between nitrogen fixers and 
+non-fixers".
 
 You can report any issue with the repository to erickcamo19@gmail.com
 
