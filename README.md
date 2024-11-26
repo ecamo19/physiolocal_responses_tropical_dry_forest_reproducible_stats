@@ -1,3 +1,5 @@
+[![DOI](https://sandbox.zenodo.org/badge/781384370.svg)](https://handle.stage.datacite.org/10.5072/zenodo.136797)
+
 # Reproducibility
 
 This repository contains all the raw data and code used in the paper titled:
