@@ -1,4 +1,4 @@
-[![DOI](https://sandbox.zenodo.org/badge/781384370.svg)](https://handle.stage.datacite.org/10.5072/zenodo.136797)
+[![DOI](https://zenodo.org/badge/781384370.svg)](https://doi.org/10.5281/zenodo.14219731)
 
 # Reproducibility
 
