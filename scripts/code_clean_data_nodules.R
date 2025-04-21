@@ -34,8 +34,8 @@ data_nodules_cleaned  <-
 	mutate(treatment = case_when(treatment == "ambientrain" ~ "no_additions",
 								treatment == "ambientrain_water_nutrients" ~ "plus_water_nutrients",     
                                 treatment == "ambientrain_water" ~ "plus_water", 
-                                treatment == "ambientrain_nutrients" ~ "plus_nutrients",
-                                TRUE ~ treatment)) %>% 
+                                treatment == "ambientrain_nutrients" ~ "plus_nutrients"
+								)) %>%  
     # Order columns
     dplyr::select(id, spcode, treatment, everything())
 
@@ -60,7 +60,8 @@ data_init_height_nfixer <-
 								treatment == "ambientrain_water_nutrients" ~ "plus_water_nutrients",     
                                 treatment == "ambientrain_water" ~ "plus_water", 
                                 treatment == "ambientrain_nutrients" ~ "plus_nutrients",
-                                TRUE ~ treatment)) %>%
+                                #TRUE ~ treatment
+								)) %>%
 
     rename(init_height = "x20150831")
 
