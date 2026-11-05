@@ -1,4 +1,4 @@
-[![DOI](https://zenodo.org/badge/781384370.svg)](https://doi.org/10.5281/zenodo.14219733)
+# [![Zenodo doi badge](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.14219733-blue.svg)](https://doi.org/10.5281/zenodo.14219733)
 
 # Reproducibility
 
